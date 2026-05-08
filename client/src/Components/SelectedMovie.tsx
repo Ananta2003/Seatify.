@@ -111,7 +111,8 @@ export default function SelectedMovie({ setSelect, type, movie }: Selectprops) {
             <div className="absolute inset-0 flex items-center justify-center ">
                 {
                     type === "user" &&
-                    <div className="bg-[#121214] w-full sm:w-11/12 md:w-4/5 lg:w-1/2 mx-auto p-4 sm:p-6 rounded-xl text-white shadow-xl border-dashed border-t-4 sm:border-t-8 border-b-4 sm:border-b-8 border-[#92260d]">
+                    <div className="bg-[#121214] w-full sm:w-11/12 md:w-4/5 lg:w-1/2 mx-auto p-4 sm:p-6 rounded-xl text-white shadow-xl border-dashed border-t-4 sm:border-t-8 border-b-4 sm:border-b-8 border-[#92260d] 
+max-h-[90vh] overflow-y-auto">
 
                         {/* Header */}
                         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 p-2">
