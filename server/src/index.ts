@@ -6,16 +6,18 @@ import adminRouter from './modules/admin/admin.js'
 dotenv.config()
 
 const app = express()
-const port = process.env.PORT
+const PORT = process.env.PORT || 3000;
 
 app.use(cors({
   origin: process.env.CLIENT_URL
 }));
+
 app.use(express.json());
 
 app.use('/api/v1/user',userRouter)
 app.use('/api/v1/admin',adminRouter)
 
-app.listen(port ,()=>{
-    console.log(`Server Running on ${port}`)
-})
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
